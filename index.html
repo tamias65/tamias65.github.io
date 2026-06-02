@@ -27,29 +27,28 @@
       color: var(--ink);
       font-family: var(--sans);
       font-weight: 300;
-      font-size: 15px;
-      line-height: 1.65;
+      font-size: 14px;
+      line-height: 1.5;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ── Layout ── */
     .site {
-      max-width: 680px;
+      max-width: 620px;
       margin: 0 auto;
       padding: 0 28px;
     }
 
-    /* ── Header / Hero ── */
+    /* Header */
     header {
-      padding: 88px 0 72px;
+      padding: 44px 0 24px;
       opacity: 0;
-      transform: translateY(18px);
-      animation: rise 0.7s ease forwards;
+      transform: translateY(14px);
+      animation: rise 0.6s ease forwards;
     }
 
     .name {
       font-family: var(--serif);
-      font-size: clamp(2.6rem, 7vw, 3.8rem);
+      font-size: clamp(1.8rem, 5vw, 2.4rem);
       font-weight: 400;
       letter-spacing: -0.02em;
       line-height: 1.05;
@@ -58,123 +57,59 @@
 
     .title-tag {
       display: inline-block;
-      margin-top: 18px;
-      font-size: 12px;
+      margin-top: 6px;
+      font-size: 11px;
       font-weight: 500;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--muted);
     }
 
-    /* ── Nav ── */
-    nav {
-      display: flex;
-      gap: 28px;
-      padding: 0 0 56px;
-      opacity: 0;
-      animation: rise 0.7s 0.1s ease forwards;
-    }
-
-    nav a {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    nav a:hover { color: var(--ink); }
-
-    /* ── Sections ── */
+    /* Sections */
     section {
-      padding: 56px 0;
-      border-top: 1px solid var(--rule);
+      padding: 20px 0;
       opacity: 0;
-      transform: translateY(14px);
-      animation: rise 0.6s ease forwards;
+      transform: translateY(10px);
+      animation: rise 0.5s ease forwards;
     }
 
-    section:nth-of-type(1) { animation-delay: 0.18s; }
-    section:nth-of-type(2) { animation-delay: 0.28s; }
+    section:nth-of-type(1) { animation-delay: 0.15s; }
+    section:nth-of-type(2) { animation-delay: 0.25s; }
 
     .section-label {
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 500;
       letter-spacing: 0.13em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: 40px;
+      margin-bottom: 12px;
     }
 
-    /* ── Experience ── */
-    .company-block {
-      margin-bottom: 44px;
-    }
-    .company-block:last-child { margin-bottom: 0; }
-
-    .company-name {
-      font-family: var(--serif);
-      font-size: 1.25rem;
-      font-weight: 400;
-      color: var(--ink);
-      margin-bottom: 16px;
-    }
-
-    .role {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 4px 16px;
-      align-items: baseline;
-      padding: 10px 0;
-      border-top: 1px solid var(--rule);
-    }
-    .role:last-child { border-bottom: 1px solid var(--rule); }
-
-    .role-title {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--ink);
-    }
-
-    .role-period {
-      font-size: 12px;
-      color: var(--muted);
-      white-space: nowrap;
-      text-align: right;
-    }
-
-    .role-location {
-      font-size: 12px;
-      color: var(--muted);
-      grid-column: 1;
-    }
-
-    /* ── Contact ── */
+    /* Contact */
     .contact-links {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 5px;
     }
 
     .contact-row {
       display: flex;
-      align-items: center;
-      gap: 16px;
+      align-items: baseline;
+      gap: 12px;
     }
 
     .contact-label {
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 500;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--muted);
-      width: 80px;
+      width: 64px;
       flex-shrink: 0;
     }
 
     .contact-value {
-      font-size: 14px;
+      font-size: 13px;
       color: var(--ink);
       text-decoration: none;
       border-bottom: 1px solid transparent;
@@ -185,22 +120,65 @@
       border-color: var(--ink);
     }
 
-    /* ── Footer ── */
-    footer {
-      padding: 40px 0 60px;
+    /* Experience */
+    .company-block {
+      margin-bottom: 14px;
+      padding-top: 10px;
+    }
+    .company-block:last-child { margin-bottom: 0; }
+
+    .company-name {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 4px;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 4px;
+    }
+
+    .role {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0 14px;
+      align-items: baseline;
+      padding: 3px 0;
+    }
+
+    .role-title {
       font-size: 12px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .role-period {
+      font-size: 11px;
+      color: var(--muted);
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    .role-location {
+      font-size: 11px;
+      color: var(--muted);
+      grid-column: 1;
+      line-height: 1.3;
+    }
+
+    /* Footer */
+    footer {
+      padding: 20px 0 32px;
+      font-size: 11px;
       color: var(--muted);
       border-top: 1px solid var(--rule);
     }
 
-    /* ── Animation ── */
     @keyframes rise {
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ── Mobile ── */
     @media (max-width: 500px) {
-      header { padding: 56px 0 48px; }
+      header { padding: 32px 0 20px; }
       .role { grid-template-columns: 1fr; }
       .role-period { text-align: left; }
     }
@@ -211,83 +189,16 @@
 
     <header>
       <h1 class="name">Alvin Chou</h1>
-      <span class="title-tag">Engineering Manager</span>
+      <span class="title-tag">Software Engineer</span>
     </header>
-
-    <nav>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <section id="experience">
-      <p class="section-label">Experience</p>
-
-      <!-- Meta -->
-      <div class="company-block">
-        <h2 class="company-name">Meta</h2>
-
-        <div class="role">
-          <span class="role-title">Engineering Manager</span>
-          <span class="role-period">Sep 2023 – Present</span>
-          <span class="role-location">Full-time</span>
-        </div>
-
-        <div class="role">
-          <span class="role-title">Senior Software Engineer</span>
-          <span class="role-period">Aug 2020 – Aug 2023</span>
-        </div>
-      </div>
-
-      <!-- Fetch Robotics -->
-      <div class="company-block">
-        <h2 class="company-name">Fetch Robotics</h2>
-
-        <div class="role">
-          <span class="role-title">Software Engineer</span>
-          <span class="role-period">Jun 2018 – May 2020</span>
-          <span class="role-location">San Francisco Bay Area</span>
-        </div>
-      </div>
-
-      <!-- AIG Science -->
-      <div class="company-block">
-        <h2 class="company-name">AIG Science</h2>
-
-        <div class="role">
-          <span class="role-title">Software Engineer / Product Manager</span>
-          <span class="role-period">Jul 2016 – Jun 2018</span>
-          <span class="role-location">New York City</span>
-        </div>
-      </div>
-
-      <!-- Gecko Robotics -->
-      <div class="company-block">
-        <h2 class="company-name">Gecko Robotics <em style="font-family:var(--sans);font-style:normal;font-size:11px;color:var(--muted);letter-spacing:0.05em;">(YC W16)</em></h2>
-
-        <div class="role">
-          <span class="role-title">Software Engineer</span>
-          <span class="role-period">Jan 2016 – Jul 2016</span>
-          <span class="role-location">San Francisco Bay Area</span>
-        </div>
-      </div>
-
-      <!-- Sapient -->
-      <div class="company-block">
-        <h2 class="company-name">Sapient Global Markets</h2>
-
-        <div class="role">
-          <span class="role-title">Associate / Senior Associate, Business Consulting</span>
-          <span class="role-period">Jul 2012 – Sep 2014</span>
-          <span class="role-location">Greater Houston</span>
-        </div>
-      </div>
-
-    </section>
 
     <section id="contact">
       <p class="section-label">Contact</p>
-
       <div class="contact-links">
+        <div class="contact-row">
+          <span class="contact-label">Email</span>
+          <a class="contact-value" href="mailto:tamias65@gmail.com">tamias65@gmail.com</a>
+        </div>
         <div class="contact-row">
           <span class="contact-label">LinkedIn</span>
           <a class="contact-value" href="https://linkedin.com/in/alvinchou" target="_blank" rel="noopener">linkedin.com/in/alvinchou</a>
@@ -303,15 +214,65 @@
       </div>
     </section>
 
-    <footer>
-      &copy; <span id="yr"></span> Alvin Chou
-    </footer>
+    <section id="experience">
+      <p class="section-label">Experience</p>
+
+      <div class="company-block">
+        <h2 class="company-name">Meta</h2>
+        <div class="role">
+          <span class="role-title">Engineering Manager</span>
+          <span class="role-period">Sep 2023 – Present</span>
+          <span class="role-location">Full-time</span>
+        </div>
+        <div class="role">
+          <span class="role-title">Senior Software Engineer</span>
+          <span class="role-period">Aug 2020 – Aug 2023</span>
+        </div>
+      </div>
+
+      <div class="company-block">
+        <h2 class="company-name">Fetch Robotics</h2>
+        <div class="role">
+          <span class="role-title">Software Engineer</span>
+          <span class="role-period">Jun 2018 – May 2020</span>
+          <span class="role-location">San Francisco Bay Area</span>
+        </div>
+      </div>
+
+      <div class="company-block">
+        <h2 class="company-name">AIG Science</h2>
+        <div class="role">
+          <span class="role-title">Software Engineer / Product Manager</span>
+          <span class="role-period">Jul 2016 – Jun 2018</span>
+          <span class="role-location">New York City</span>
+        </div>
+      </div>
+
+      <div class="company-block">
+        <h2 class="company-name">Gecko Robotics <em style="font-family:var(--sans);font-style:normal;font-size:10px;color:var(--muted);letter-spacing:0.05em;">(YC W16)</em></h2>
+        <div class="role">
+          <span class="role-title">Software Engineer</span>
+          <span class="role-period">Jan 2016 – Jul 2016</span>
+          <span class="role-location">San Francisco Bay Area</span>
+        </div>
+      </div>
+
+      <div class="company-block">
+        <h2 class="company-name">Sapient Global Markets</h2>
+        <div class="role">
+          <span class="role-title">Associate / Senior Associate, Business Consulting</span>
+          <span class="role-period">Jul 2012 – Sep 2014</span>
+          <span class="role-location">Greater Houston</span>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>&copy; <span id="yr"></span> Alvin Chou</footer>
 
   </div>
-
   <script>
     document.getElementById('yr').textContent = new Date().getFullYear();
   </script>
 </body>
-</html> 
- 
+</html>
